@@ -1,4 +1,4 @@
-import { getCountries } from "../../Fabrique numérique/ExploreTheWorld/services/api";
+import { getCountries } from "./public/services/api.js";
 
-const countries = getCountries()
+const countries = await getCountries()
 console.log(countries)
