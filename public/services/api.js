@@ -18,7 +18,7 @@ const baseApi = "https://restcountries.com/v3.1/";
  * @function getCountries
  * @returns {Promise<Array>} Liste des pays avec leurs informations
  * @throws {Error} Si la requête échoue ou si les données sont invalides
- * 
+ *
  * @example
  * // Récupérer tous les pays
  * const countries = await getCountries();
@@ -42,7 +42,7 @@ export async function getCountries() {
  * @param {string} countryName - Le nom du pays à rechercher
  * @returns {Promise<Array>} Informations du pays recherché
  * @throws {Error} Si le nom du pays est invalide ou si la requête échoue
- * 
+ *
  * @example
  * // Récupérer les informations de la France
  * const franceInfo = await getCountry('France');
@@ -57,5 +57,18 @@ export async function getCountry(countryName) {
     return data;
   } catch (error) {
     console.log("Erreur au niveau de getCountry : ", error);
+  }
+}
+
+// Récupérer la carte d'un pays
+function displayMap(latitude, longitude) {
+  try {
+    const map = L.map("map").setView([latitude, longitude], 6);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+  } catch (error) {
+    console.error("Erreur : ", error);
   }
 }
