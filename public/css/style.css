@@ -3,11 +3,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 @import "./navbar.css";
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   display: flex;
-  position: relative;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -21,6 +25,7 @@ body {
 
 h1 {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Cinzel Decorative", serif;
@@ -30,15 +35,37 @@ h1 {
   color: #ffffff;
 }
 
-input,
-button {
+input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
   padding: 0.6rem 1rem;
   font-size: 1rem;
   margin: 0.5rem 0;
   border: 1px solid #a1865e;
-  border-radius: 4px;
-  background-color: #fff4dc;
+  border-radius: 16px;
+  background-color: #000000;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
   color: #3b2a1a;
+}
+
+button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 16px;
+  background-color: 5B4636;
+  color: #3b2a1a;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
@@ -47,7 +74,16 @@ button:hover {
 }
 
 p {
-  font-style: italic;
-  color: #4a3822;
-  margin-top: 1rem;
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+img {
+  width: 25%;
+  position: absolute;
+  left: 20px;
+  top: 40%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
