@@ -1,11 +1,10 @@
 export function constructCountryPage() {
-  const section = document.getElementById("country");
-  section.innerHTML = `
-          <h2>${country.name}</h2>
-          <img src="${country.flags.svg}" alt="Drapeau de ${country.name}" width="150" />
-      
-          <button id="addToFavorites">Ajouter aux favoris</button>
-        `;
+  const country = document.getElementById("country") 
+  country.style.display = "flex" // on affiche le container country
+  document.getElementById("favoris").style.display = "none" // on fait disparaitre les autres container
+  document.getElementById("home").style.display = "none"
+  // construction de country
+  
 }
 constructCountryPage();
 
