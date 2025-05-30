@@ -1,13 +1,37 @@
+/**
+ * @fileoverview Gestionnaire d'affichage des informations des pays
+ * @module country
+ * @description Ce module gère la construction et l'affichage des pages de pays,
+ * incluant les informations détaillées comme le drapeau, la capitale, la population, etc.
+ */
+
 import { getCountry } from '../services/api.js';
 import { toggleCountry } from './toggle/country-toggle.js';
 
+/**
+ * Construit la page de pays et l'affiche
+ * @function constructCountryPage
+ * @returns {void}
+ * @throws {Error} Si le conteneur de pays n'est pas trouvé dans le DOM
+ */
 export function constructCountryPage() {
     const countryContainer = document.getElementById('country');
     if (countryContainer) {
-        countryContainer.style.display = 'block';
+        countryContainer.style.display = 'flex';
     }
 }
 
+/**
+ * Affiche les informations détaillées d'un pays
+ * @function displayCountry
+ * @param {string} countryName - Le nom du pays à afficher
+ * @returns {Promise<void>}
+ * @throws {Error} Si le pays n'est pas trouvé ou si une erreur survient lors de l'affichage
+ * 
+ * @example
+ * // Afficher les informations de la France
+ * await displayCountry('France');
+ */
 export async function displayCountry(countryName) {
     try {
         const countryData = await getCountry(countryName);

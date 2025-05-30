@@ -1,0 +1,21 @@
+:root {
+    /* Couleurs principales */
+    --bg-dark: #000;                    /* Fond noir pour les éléments sombres */
+    --bg-light: rgba(255, 255, 255, 0.1); /* Fond clair semi-transparent */
+    --bg-hover: #c2a675;                /* Couleur de survol dorée */
+    --bg-button: #5b4636;               /* Couleur principale des boutons */
+    --bg-button-secondary: #8c5a2b;     /* Couleur secondaire des boutons */
+    
+    /* Couleurs de texte */
+    --text-light: #fff;                 /* Texte blanc */
+    --text-dark: #3b2a1a;              /* Texte marron foncé */
+    --text-placeholder: #5b4636;        /* Texte des placeholders */
+    
+    /* Couleurs de bordure et overlay */
+    --border-color: #a1865e;            /* Couleur des bordures */
+    --card-overlay: rgba(0, 0, 0, 0.3); /* Overlay pour les cartes */
+    
+    /* Couleurs spécifiques */
+    --button-text: #fdf6e3;             /* Texte des boutons */
+    --background-overlay: rgba(142, 99, 72, 0.5); /* Overlay du fond */
+}

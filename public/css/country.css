@@ -1,56 +1,33 @@
 /* PAGE COUNTRY */
 
+/* Importation des polices et des composants */
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import "./root/color.css";
+@import "./root/size.css";
 @import "./navbar.css";
 
-:root {
-  /* Couleurs */
-  --bg-dark: #000;
-  --bg-light: rgba(255, 255, 255, 0.1);
-  --bg-hover: #c2a675;
-  --bg-button: #5b4636;
-  --bg-button-secondary: #8c5a2b;
-  --text-light: #fff;
-  --text-dark: #3b2a1a;
-  --text-placeholder: #5b4636;
-  --border-color: #a1865e;
-  --card-overlay: rgba(0, 0, 0, 0.3);
-
-  /* Polices */
-  --font-title: "Cinzel Decorative", serif;
-  --font-body: "Roboto Slab", serif;
-
-  /* Radius et ombre */
-  --radius-lg: 16px;
-  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Reset & Base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Conteneur principal de la page pays */
 #country_contenu {
-  width: 90%;
-  max-width: 1200px;
-  padding: 2rem;
-  border-radius: 20px;
+  width: var(--container-width);
+  max-width: var(--container-max-width);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
   background-color: var(--bg-light);
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(10px);
   color: var(--text-light);
-  gap: 2rem;
+  gap: var(--spacing-md);
 }
 
+/* Section supérieure avec image et informations */
 #country_contenu_up {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: var(--spacing-md);
 }
 
+/* Zone de l'image du pays */
 #country_contenu_up_left {
   flex: 1;
   display: flex;
@@ -60,17 +37,19 @@
 
 #country_contenu_up_left img {
   width: 100%;
-  max-width: 300px;
+  max-width: var(--img-width-lg);
   border-radius: var(--radius-md);
 }
 
+/* Zone des informations du pays */
 #country_contenu_up_right {
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-sm);
 }
 
+/* En-tête avec nom du pays et drapeau */
 #country_contenu_up_right_Title {
   display: flex;
   justify-content: space-between;
@@ -78,41 +57,51 @@
 }
 
 #country_contenu_up_right_Title_nameCountry {
-  font-size: 2.5rem;
+  font-size: var(--font-size-subtitle);
   font-weight: bold;
   font-family: var(--font-title);
+  color: var(--text-light);
 }
 
 #country_contenu_up_right_Title_flag img {
-  width: 60px;
+  width: var(--img-width-sm);
   height: auto;
 }
 
+/* Description du pays */
 #country_contenu_up_right_Description {
-  font-size: 1.2rem;
+  font-size: var(--font-size-body);
   line-height: 1.5;
+  color: var(--text-light);
+  font-family: var(--font-body);
 }
 
+/* Section inférieure avec cartes d'information */
 #country_contenu_down {
-  margin-top: 2rem;
+  margin-top: var(--spacing-md);
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--spacing-md);
   justify-content: center;
 }
 
+/* Style des cartes d'information */
 #country_contenu_down > div {
   background-color: var(--card-overlay);
   border: 1px solid var(--border-color);
-  padding: 1rem;
+  padding: var(--spacing-sm);
   border-radius: var(--radius-md);
   min-width: 200px;
   text-align: center;
+  color: var(--text-light);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
 }
 
+/* Image de fond */
 img {
   position: absolute;
-  width: 25%;
+  width: var(--img-width-xl);
   top: 45%;
   right: 0;
 }

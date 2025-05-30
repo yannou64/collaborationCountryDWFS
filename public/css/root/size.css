@@ -1,0 +1,37 @@
+:root {
+    /* Tailles de police */
+    --font-size-title: 5rem;            /* Taille des titres principaux */
+    --font-size-subtitle: 2.5rem;       /* Taille des sous-titres */
+    --font-size-body: 1.2rem;           /* Taille du texte normal */
+    --font-size-button: 20px;           /* Taille du texte des boutons */
+    --font-size-nav: 30px;              /* Taille du texte de navigation */
+
+    /* Espacements */
+    --spacing-xs: 0.5rem;               /* Espacement très petit */
+    --spacing-sm: 1rem;                 /* Espacement petit */
+    --spacing-md: 2rem;                 /* Espacement moyen */
+    --spacing-lg: 3rem;                 /* Espacement grand */
+    --spacing-xl: 4rem;                 /* Espacement très grand */
+
+    /* Dimensions des conteneurs */
+    --container-width: 90%;             /* Largeur des conteneurs */
+    --container-max-width: 1200px;      /* Largeur maximale */
+    --card-width: 250px;                /* Largeur des cartes */
+    --button-width: 231px;              /* Largeur des boutons */
+    --button-height: 86px;              /* Hauteur des boutons */
+
+    /* Bordures et rayons */
+    --radius-sm: 8px;                   /* Petit rayon */
+    --radius-md: 16px;                  /* Rayon moyen */
+    --radius-lg: 20px;                  /* Grand rayon */
+
+    /* Ombres */
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.4);    /* Ombre moyenne */
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.4);    /* Ombre grande */
+
+    /* Dimensions des images */
+    --img-width-sm: 60px;               /* Petite image */
+    --img-width-md: 80px;               /* Image moyenne */
+    --img-width-lg: 300px;              /* Grande image */
+    --img-width-xl: 25%;                /* Très grande image */
+}

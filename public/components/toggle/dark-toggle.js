@@ -1,8 +1,9 @@
 /**
  * @fileoverview Gestionnaire du thème sombre/clair
- * @module toggle-dark
+ * @module dark-toggle
  * @description Ce module gère le basculement entre le mode sombre et clair,
- * ainsi que la persistance de la préférence utilisateur.
+ * ainsi que la persistance de la préférence utilisateur dans le localStorage.
+ * Il fournit également des fonctions d'initialisation pour le thème.
  */
 
 import { saveTheme, loadTheme } from "../../services/local-storage.js";
@@ -47,7 +48,7 @@ export const toggleDarkMode = () => {
 /**
  * Initialise le thème au chargement de la page
  * @function initTheme
- * @description Vérifie le thème sauvegardé et applique les paramètres appropriés
+ * @description Vérifie le thème sauvegardé dans le localStorage et applique les paramètres appropriés
  * @returns {void}
  * @throws {Error} Si l'élément toggle n'est pas trouvé dans le DOM
  */
@@ -81,8 +82,10 @@ export const initTheme = () => {
 /**
  * Initialise le composant de thème
  * @function initThemeComponent
- * @description Ajoute les écouteurs d'événements nécessaires
+ * @description Ajoute les écouteurs d'événements nécessaires pour le basculement du thème
+ * et initialise le thème au chargement de la page
  * @returns {void}
+ * @throws {Error} Si l'élément toggle n'est pas trouvé lors de l'initialisation
  */
 export const initThemeComponent = () => {
     console.log('[DEBUG] initThemeComponent - Initialisation du composant de thème');

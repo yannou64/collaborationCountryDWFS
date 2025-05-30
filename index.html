@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!-- Métadonnées et configuration de base -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ExploreTheWorld</title>
+    <!-- Feuilles de style et scripts -->
     <link rel="stylesheet" href="./public/css/style.css" />
     <script defer type="module" src="./main.js"></script>
   </head>
   <body>
+    <!-- Barre de navigation principale -->
     <nav>
       <ul>
         <li><a href="#" id="home-toggle">Home</a></li>
@@ -15,53 +18,64 @@
       </ul>
     </nav>
 
+    <!-- Section principale (Home) -->
     <div class="container" id="home">
       <h1>EXPLORE THE WORLD</h1>
+      <!-- Zone de recherche de pays -->
       <input type="text" id="input" placeholder="Find your country" />
       <button id="btn_input">Explore Me</button>
+      <!-- Liste des pays (sera remplie dynamiquement) -->
       <div id="countryList"></div>
+      <!-- Texte d'introduction -->
       <p>Prêt à découvrir les mystères de monde avec moi?</p>
       <p>Explore chaque pays comme un véritable explorateur.</p>
       <p>Ta mission commence ici</p>
 
-      <a href="public/images/lara1-removebg-preview.png"
-        ><img
-          src="public/images/lara1-removebg-preview.png"
-          alt="avatar Lara Croft"
-      /></a>
+      <!-- Image de Lara Croft (avatar) -->
+      <a href="public/images/lara1-removebg-preview.png">
+        <img src="public/images/lara1-removebg-preview.png" alt="avatar Lara Croft" />
+      </a>
     </div>
 
+    <!-- Section des favoris (masquée par défaut) -->
     <div class="container" id="favoris" style="display: none">
       <h1>Mes Favoris</h1>
+      <!-- Carte de favori (template) -->
       <div class="favori-card">
         <img src="./public/images/default-flag.png" alt="Flag" />
         <h2>Nom du pays</h2>
         <button>Retirer</button>
-        <a href="public/images/laratreasurechest.png"
-          ><img
-            src="public/images/laratreasurechest.png"
-            alt="avatar Lara Croft Treasur Chest"
-        /></a>
+        <!-- Image de Lara Croft avec coffre au trésor -->
+        <a href="public/images/laratreasurechest.png">
+          <img src="public/images/laratreasurechest.png" alt="avatar Lara Croft Treasur Chest" />
+        </a>
       </div>
     </div>
 
+    <!-- Section détaillée du pays (masquée par défaut) -->
     <div class="container" id="country" style="display: none">
+      <!-- Contenu principal du pays -->
       <div id="country_contenu">
+        <!-- Section supérieure -->
         <div id="country_contenu_up">
           <div id="country_contenu_up_left"></div>
           <div id="country_contenu_up_right">
+            <!-- En-tête avec nom et drapeau du pays -->
             <div id="country_contenu_up_right_Title">
               <div id="country_contenu_up_right_Title_nameCountry"></div>
               <div id="country_contenu_up_right_Title_flag"></div>
             </div>
+            <!-- Description du pays -->
             <div id="country_contenu_up_right_Description"></div>
           </div>
         </div>
+        <!-- Section inférieure (informations supplémentaires) -->
         <div id="country_contenu_down"></div>
       </div>
-      <a href="public/images/lara2.png"
-        ><img src="public/images/lara2.png" alt="avatar Lara Croft 2"
-      /></a>
+      <!-- Image de Lara Croft (variante) -->
+      <a href="public/images/lara2.png">
+        <img src="public/images/lara2.png" alt="avatar Lara Croft 2" />
+      </a>
     </div>
   </body>
 </html>

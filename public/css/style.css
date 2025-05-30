@@ -1,7 +1,21 @@
-/* style.css */
+/* Fichier principal de style */
+
+/* Importation des polices Google */
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
-@import "./navbar.css";
-@import "./favoris.css";
-@import "./country.css";
-@import "./landing.css"; 
+
+/* Importation des variables */
+@import "./root/color.css";    /* Variables de couleurs */
+@import "./root/size.css";     /* Variables de dimensions */
+
+/* Importation des composants */
+@import "./navbar.css";        /* Barre de navigation */
+@import "./favoris.css";       /* Page des favoris */
+@import "./country.css";       /* Page de détail d'un pays */
+@import "./landing.css";       /* Page d'accueil */ 
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

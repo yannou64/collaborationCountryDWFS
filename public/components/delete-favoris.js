@@ -1,8 +1,9 @@
 /**
  * @fileoverview Gestionnaire de suppression des favoris
  * @module delete-favoris
- * @description Ce module gère la suppression des favoris dans l'interface utilisateur
- * et la synchronisation avec le stockage local.
+ * @description Ce module gère la suppression des pays favoris dans l'interface utilisateur
+ * et la synchronisation avec le stockage local. Il fournit une fonction pour gérer
+ * les événements de suppression et met à jour à la fois le DOM et le stockage local.
  */
 
 import { removeFavorite } from "../services/local-storage.js";
@@ -12,7 +13,7 @@ import { removeFavorite } from "../services/local-storage.js";
  * @function handleFavoriteDeletion
  * @param {Event} e - L'événement de clic sur le bouton de suppression
  * @returns {void}
- * @throws {Error} Si l'ID du favori n'est pas un nombre valide
+ * @throws {Error} Si l'ID du favori n'est pas un nombre valide ou si l'élément n'est pas trouvé
  * 
  * @example
  * // Ajouter l'écouteur d'événement

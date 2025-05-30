@@ -1,3 +1,16 @@
+/**
+ * @fileoverview Gestionnaire de l'affichage de la section pays
+ * @module country-toggle
+ * @description Ce module gère l'affichage de la section pays et le masquage des autres sections
+ */
+
+/**
+ * Bascule l'affichage vers la section pays
+ * @function toggleCountry
+ * @description Affiche la section pays et masque les sections home et favoris
+ * @returns {void}
+ * @throws {Error} Si un ou plusieurs éléments requis ne sont pas trouvés dans le DOM
+ */
 export function toggleCountry() {
     console.log("Exécution de toggleCountry");
     

@@ -1,3 +1,16 @@
+/**
+ * @fileoverview Gestionnaire de l'affichage de la section favoris
+ * @module favoris-toggle
+ * @description Ce module gère l'affichage de la section favoris et le masquage des autres sections
+ */
+
+/**
+ * Bascule l'affichage vers la section favoris
+ * @function toggleFavoris
+ * @description Affiche la section favoris et masque les sections home et country
+ * @returns {void}
+ * @throws {Error} Si un ou plusieurs éléments requis ne sont pas trouvés dans le DOM
+ */
 export function toggleFavoris() {
     console.log("Exécution de toggleFavoris");
     
