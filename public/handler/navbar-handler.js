@@ -1,5 +1,5 @@
-import { toggleFavoris } from "../components/favoris-togle.js";
-import { toggleHome } from "../components/home-toggle.js";
+import { toggleFavoris } from "../components/toggle/favoris-togle.js";
+import { toggleHome } from "../components/toggle/home-toggle.js";
 
 export function initNavbarHandlers() {
     // Gestion du bouton favoris

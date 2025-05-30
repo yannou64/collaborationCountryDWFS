@@ -5,7 +5,7 @@
  * ainsi que la persistance de la préférence utilisateur.
  */
 
-import { saveTheme, loadTheme } from "../services/local-storage.js";
+import { saveTheme, loadTheme } from "../../services/local-storage.js";
 
 const THEME_KEY = 'theme';
 
