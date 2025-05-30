@@ -15,10 +15,12 @@
 
 /* Grille de cartes de favoris */
 .favoris-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  position: relative;
+  z-index: 1;
 }
 
 /* Style des cartes individuelles */
@@ -33,12 +35,13 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   color: var(--text-light);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Animation au survol des cartes */
 .favori-card:hover {
   transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Style des images dans les cartes */
@@ -47,6 +50,7 @@
   height: auto;
   border-radius: var(--radius-sm);
   margin-bottom: var(--spacing-xs);
+  object-fit: cover;
 }
 
 /* Style des titres dans les cartes */
@@ -65,6 +69,35 @@
   color: var(--button-text);
   font-family: var(--font-title);
   font-size: var(--font-size-button);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.favori-card button:hover {
+  background-color: var(--bg-button-hover);
+}
+
+/* Animation de suppression */
+@keyframes removeCard {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.favori-card-removing {
+  animation: removeCard 0.3s ease-out forwards;
 }
 
 /* Image de fond */
@@ -73,6 +106,7 @@ img {
   width: var(--img-width-xl);
   top: 45%;
   left: 0;
+  z-index: 0;
 }
 
 /* Style spécifique pour les drapeaux */
@@ -81,6 +115,17 @@ img.flag {
   position: absolute;
   left: 0;
   top: 50%;
+  z-index: 0;
 }
 
+/* Message quand il n'y a pas de favoris */
+.no-favorites {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-light);
+  font-family: var(--font-title);
+  font-size: var(--font-size-subtitle);
+  position: relative;
+  z-index: 1;
+}
 
