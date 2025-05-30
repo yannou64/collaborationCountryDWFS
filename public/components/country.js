@@ -7,8 +7,20 @@ export function constructCountryPage() {
 }
 // constructCountryPage();
 
-// Ajouter aux favoris
-document.getElementById("addToFavorites").addEventListener("click", () => {
-  addFavorite({ id: country.ccn3, name: country.name });
-  alert(`${country.name} ajouté aux favoris.`);
+// Attendre que le DOM soit chargé avant d'ajouter les écouteurs d'événements
+document.addEventListener('DOMContentLoaded', () => {
+  const addToFavoritesButton = document.getElementById("addToFavorites");
+  if (addToFavoritesButton) {
+    addToFavoritesButton.addEventListener("click", () => {
+      // Vérifier si country est défini avant de l'utiliser
+      if (typeof country !== 'undefined') {
+        addFavorite({ id: country.ccn3, name: country.name });
+        alert(`${country.name} ajouté aux favoris.`);
+      } else {
+        console.error("La variable country n'est pas définie");
+      }
+    });
+  } else {
+    console.error("Le bouton addToFavorites n'a pas été trouvé dans le DOM");
+  }
 });
