@@ -2,8 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 @import "./navbar.css";
+@import "./landingpage.css";
+@import "./favoris.css";
+@import "./countryPage.css";
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -96,9 +99,9 @@ img {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* //FAVORIS PAGE STYLE */
+//FAVORIS PAGE STYLE */
 
-#favoris {
+/* #favoris {
   flex-direction: column;
   gap: 2rem;
 }
@@ -145,10 +148,10 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-}
+} */
 
 /* COUNTRY PAGE STYLE */
-#country_contenu {
+/* #country_contenu {
   width: 90%;
   max-width: 1200px;
   padding: 2rem;
@@ -223,4 +226,4 @@ img {
   border-radius: 12px;
   min-width: 200px;
   text-align: center;
-}
+} */
