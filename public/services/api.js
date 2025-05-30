@@ -61,14 +61,25 @@ export async function getCountry(countryName) {
 }
 
 // Récupérer la carte d'un pays
-function displayMap(latitude, longitude) {
+export function displayMap(latitude, longitude) {
   try {
+    // Vérifier si une carte existe déjà
+    const existingMap = document.getElementById('map');
+    if (existingMap && existingMap._leaflet_id) {
+      // Si une carte existe, la détruire
+      existingMap._leaflet_id = null;
+      existingMap.innerHTML = '';
+    }
+
+    // Créer une nouvelle carte
     const map = L.map("map").setView([latitude, longitude], 6);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
+    return map;
   } catch (error) {
-    console.error("Erreur : ", error);
+    console.error("Erreur lors de l'initialisation de la carte : ", error);
+    return null;
   }
 }

@@ -6,6 +6,7 @@
  */
 
 import { getCountry } from '../services/api.js';
+import { displayMap } from '../services/api.js';
 import { toggleCountry } from './toggle/country-toggle.js';
 
 /**
@@ -51,6 +52,21 @@ export async function displayCountry(countryName) {
         // Affichage du drapeau
         const flagElement = document.getElementById('country_contenu_up_right_Title_flag');
         flagElement.innerHTML = `<img src="${country.flags.svg}" alt="Drapeau de ${country.name.common}" style="width: 100px;">`;
+
+        // Affichage de la carte
+        if (country.latlng && country.latlng.length === 2) {
+            // Attendre que le DOM soit mis à jour
+            setTimeout(() => {
+                const map = displayMap(country.latlng[0], country.latlng[1]);
+                if (map) {
+                    // Ajouter un marqueur pour le pays
+                    L.marker([country.latlng[0], country.latlng[1]])
+                        .addTo(map)
+                        .bindPopup(country.name.common)
+                        .openPopup();
+                }
+            }, 100);
+        }
 
         // Affichage de la description
         const descriptionElement = document.getElementById('country_contenu_up_right_Description');
