@@ -11,7 +11,7 @@ export function toggleFavoris() {
     }
 
     // Afficher la section favoris
-    favorisSection.style.display = 'block';
+    favorisSection.style.display = 'flex';
     // Cacher les autres sections
     homeSection.style.display = 'none';
     countrySection.style.display = 'none';

@@ -32,3 +32,8 @@ nav ul li a {
   text-align: center;
   transition: color 0.3s ease;
 }
+
+nav ul li a:hover {
+  background-color: var(--bg-hover);
+  cursor: pointer;
+}

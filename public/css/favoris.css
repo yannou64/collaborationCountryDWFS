@@ -1,50 +1,96 @@
-/* //FAVORIS PAGE STYLE */
+/* PAGE FAVORIS */
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import "./navbar.css";
+
+:root {
+  /* Couleurs */
+  --bg-dark: #000;
+  --bg-light: rgba(255, 255, 255, 0.1);
+  --bg-hover: #c2a675;
+  --bg-button: #5b4636;
+  --bg-button-secondary: #8c5a2b;
+  --text-light: #fff;
+  --text-dark: #3b2a1a;
+  --text-placeholder: #5b4636;
+  --border-color: #a1865e;
+  --card-overlay: rgba(0, 0, 0, 0.3);
+
+  /* Polices */
+  --font-title: "Cinzel Decorative", serif;
+  --font-body: "Roboto Slab", serif;
+
+  /* Radius et ombre */
+  --radius-lg: 16px;
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 #favoris {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .favori-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid #a1865e;
-    border-radius: 16px;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    font-family: "Roboto Slab", serif;
-    color: #fff;
-    transition: transform 0.2s ease;
-  }
-  
-  .favori-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .favori-card img {
-    width: 80px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .favori-card h2 {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    text-align: center;
-  }
-  
-  .favori-card button {
-    background-color: #8c5a2b;
-    margin-top: 1rem;
-  }
-  
-  .favoris-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.favoris-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.favori-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  padding: 1rem;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  color: var(--text-light);
+  transition: transform 0.2s ease;
+}
+
+.favori-card:hover {
+  transform: translateY(-5px);
+}
+
+.favori-card img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.favori-card h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.favori-card button {
+  background-color: var(--bg-button-secondary);
+  margin-top: 1rem;
+}
+
+img {
+  position: absolute;
+  width: 25%;
+  top: 45%;
+  left: 0;
+}
+
+img.flag {
+  width: 25%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
